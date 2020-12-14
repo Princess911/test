@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const callback = function() {
+            console.log('Timeout!')
+        }
+        let a = setTimeout(callback, 1000);
+        clearTimeout(a);
+        console.log(a);
+
+       let b = setInterval(callback, 3000);
+       console.log(b);
+
+    </script>
+</body>
+</html>
