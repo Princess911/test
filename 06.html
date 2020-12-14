@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='box'>
+        <p id="para">test</p>
+    </div>
+
+    <a id="link" href="https://www.microsoft.com">导航到微软公司网站</a>
+    <input type="text" id='txtName'>
+    <script>
+        const box = document.querySelector('#box')
+        const para = document.querySelector('#para')
+
+        const callback = (e) => {
+            console.clear()
+            console.log(`标记名：${e.currentTarget.tagName}, 传播阶段：${e.eventPhase}`)
+        }
+
+        box.addEventListener('click', callback, true)
+        // para.addEventListener('click', callback, true)
+        box.addEventListener('click', callback, false)
+        para.addEventListener('click', callback, false)
+
+        const link = document.querySelector('#link')
+        link.addEventListener('click', (e) => {
+            if (e.cancelable) {
+                e.preventDefault()
+            }
+            console.log(e.defaultPrevented)
+            console.log('you click link')
+        })
+
+        const txtName = document.querySelector('#txtName')
+        txtName.addEventListener('keypress',(e) => {
+            if (e.charCode < 97 || e.charCode > 122) {
+                e.preventDefault()
+            }
+        })
+
+    </script>
+</body>
+</html>

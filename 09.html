@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id='link' href="https://www.microsoft.com">Microsoft HomePage</a>
+    <input type="text">
+    <script>
+        const oLink = document.querySelector('#link')
+
+        oLink.addEventListener('click',(event) => {
+            if (event.cancelable) {
+                event.preventDefault()
+            }
+            console.log(event.defaultPrevented)
+            console.log('hello, link')
+        })
+
+
+        const oText = document.querySelector('input')
+
+        oText.addEventListener('keypress',(event) => {
+            if (event.charCode < 97 || event.charCode > 122) {
+                event.preventDefault()
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 200px;height:200px;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <button id="myButton">click me</button>
+    </div>
+
+    <script>
+        const box = document.querySelector("#box")
+        const myButton = document.querySelector("#myButton")
+
+        box.addEventListener('click', (e) => {
+            console.clear()
+            console.log(e.isTrusted)
+            console.log(`event.type:${e.type}`)
+            console.log(`event.target: ${e.target.tagName}`)
+            console.log(`event.currentTarget:${e.currentTarget}`)
+        })
+
+    </script>
+</body>
+</html>
