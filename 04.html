@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            border: 1px solid red;
+            height: 100px;
+            width: 100px;
+        }
+        .bgColor {
+            background-color: gray;
+        }
+        .show {
+            /* display: none; */
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv">test</div>
+    <button id="btnClick">点我</button>
+    <script>
+        const oDiv = document.querySelector("#myDiv")
+        oDiv.classList.add('box')
+        oDiv.classList.add('bgColor')
+        
+        const btnClick = document.querySelector('#btnClick')
+        btnClick.addEventListener('click',() => {
+            oDiv.classList.toggle('show')
+            oDiv.classList.remove('bgColor')
+            console.log(oDiv.classList)
+        })
+    </script>
+</body>
+</html>

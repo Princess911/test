@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>测试访问元素内容</h1>
+    <p>this is <i>a text</i> document</p>
+    <script>
+        const oPara = document.querySelector("p")
+        oPara.insertAdjacentHTML('afterend','<i>test</i>')
+        console.log(oPara.innerHTML)   
+        console.log(typeof oPara.innerHTML)
+        console.log(oPara.outerHTML)
+        console.log(oPara.textContent)
+        console.log(oPara.innerText)
+        oPara.innerHTML = "<b>test</b><i>test1</i>"
+    </script>
+</body>
+</html>

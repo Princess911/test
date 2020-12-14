@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>this is a heading</h1>
+    <p>this is <i>a little</i> sample</p>
+    <script>
+        const myPara = document.querySelector('p')
+
+        // beforebegin、afterbegin、beforeend、 afterend
+        myPara.insertAdjacentHTML('beforebegin','<i>test</i>')
+        myPara.insertAdjacentHTML('beforeend','<i>test2</i>')
+        myPara.insertAdjacentText('afterbegin','testsdasdfasdfa;sdjf')
+        console.log(myPara.innerHTML)
+        console.log(myPara.outerHTML)
+
+        ///= 只访问里面的文本
+        console.log(myPara.textContent)
+        console.log(document.documentElement.textContent)
+        console.log(myPara.innerText)
+    </script>
+</body>
+</html>
