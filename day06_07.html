@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="child-one">
+        <h1>
+            Child One
+        </h1>
+    </div>
+    <script>
+        const childOne = document.getElementById("child-one");
+        const childOneHandler = () => {
+            console.log('Captured on child one')
+        }
+        const childOneHandlerCatch = () => {
+            console.log('Captured on child one in capture phase')
+        }
+        childOne.addEventListener("click", childOneHandler);
+        //childOne.addEventListener("click", childOneHandlerCatch, true);
+    </script>
+</body>d
+
+</html>

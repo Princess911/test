@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #lstBooks {
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    <ul id="lstBooks">
+        <li class='book'>JavaScript</li>
+        <li>Android1</li>
+        <li class='book'>Python1</li>
+        <li>Java</li>
+    </ul>
+    -->
+    <script>
+        const oFrag = document.createDocumentFragment()
+
+        const oElement = document.createElement('ul')
+        oElement.setAttribute('id',"lstBooks")
+
+        const oItem1 = document.createElement('li')
+        oItem1.setAttribute('class', 'book')
+        oElement.appendChild(oItem1)
+
+        const oText1 = document.createTextNode('JavaScript')
+        oItem1.appendChild(oText1)
+
+        const oItem2 = document.createElement('li')
+        oElement.appendChild(oItem2)
+
+        const oText2 = document.createTextNode('Python')
+        oItem2.appendChild(oText2)
+
+        const oItem3 = document.createElement('li')
+        oItem3.setAttribute('class','book')
+        const oText3 = document.createTextNode('Java')
+        oItem3.appendChild(oText3)
+        oElement.appendChild(oItem3)
+
+        const oItem4 = document.createElement('li')
+        const oText4 = document.createTextNode('Android')
+        oItem4.appendChild(oText4)
+        oElement.appendChild(oItem4)
+        
+        oFrag.appendChild(oElement)
+        document.body.appendChild(oFrag)
+        console.log(oFrag.textContent)
+    </script>
+</body>
+</html>

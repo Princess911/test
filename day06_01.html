@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #lstBooks .book {
+            border: 1px solid red;
+        }
+
+        #lstBooks :nth-child(3) {
+            color: red;
+        }
+        #lstBooks {
+            background-color: red;
+        }
+        #lstBooks1 {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="lstBooks">
+        <li class='book'>JavaScript</li>
+        <li>Android1</li>
+        <li class='book'>Python1</li>
+        <li>Java</li>
+
+    </ul>
+    <script>
+        /*
+        //const oList = document.querySelector('#lstBooks')
+        //console.log(oList.innerHTML)  
+        //console.log(oList.nodeType)
+        //console.log(oList.nodeName)
+        //console.log(oList.nodeValue)
+        //console.log(oList.firstChild.nodeType)
+        //console.log(oList.firstElementChild.nodeType)
+        //console.log(document.doctype.nextSibling.innerHTML)
+        //console.log(document.documentElement.nodeName)
+        //console.log(document.body.nodeName)
+        //console.log(document.doctype.nextSibling.firstElementChild.nextSibling.innerHTML)
+        const oList = document.getElementById('lstBooks')
+        const oItem = document.getElementsByTagName('li')
+        console.log(oItem.length) //4
+        const Item2 = document.getElementsByClassName('book')
+        console.log(Item2.length) //2
+        oList.removeChild(oList.lastChild)
+        console.log(oItem.length)
+      
+        const oList = document.querySelector('#lstBooks .book')
+        console.log(oList.innerHTML)
+    
+
+        const oLists = document.querySelectorAll('#lstBooks .book')
+        console.log(oLists.length)  //2
+        const oList = document.querySelector('#lstBooks')
+        oList.removeChild(document.querySelector("#lstBooks :nth-child(3)"))
+        console.log(oLists.length)  // 2
+            */
+        
+        const oLists = document.querySelector("#lstBooks")
+        console.log(oLists.getAttribute('id'))  // lstBooks
+        oLists.setAttribute('id','lstBooks1')
+        oLists.removeAttribute("id")
+    </script>
+
+</body>
+
+</html>

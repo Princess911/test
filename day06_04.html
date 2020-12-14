@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    <ul id="lstLanguage">
+        <li>JavaScript</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>AI</li>
+    </ul>
+    -->
+    <script>
+        // 创建一个文档片段
+        const oFrag = document.createDocumentFragment()
+
+        // 创建一个UL元素节点
+        const oList = document.createElement('ul')
+        oList.setAttribute("id", 'lstLanguage')
+        // 把UI元素节点添加成为 body 元素的子节点
+        oFrag.appendChild(oList)
+        // 创建一个 li 元素节点
+        const oItem = document.createElement('li')
+        oList.appendChild(oItem)
+        const oText = document.createTextNode('JavaScript')
+        oItem.appendChild(oText)
+
+        document.body.appendChild(oFrag)
+    </script>
+
+</body>
+</html>

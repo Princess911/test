@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=600, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #lstCourse :last-child {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <ul id="lstCourse">
+        <li class="course">Java</li>
+        <li class="course">Python</li>
+        <li class="course">JavaScript</li>
+        <li class="course">C</li>
+    </ul>
+    <script>
+        const oList = document.getElementById('lstCourse')
+        console.log(oList.nodeName)   // UL
+        console.log(oList.innerHTML)
+        const oElements = document.getElementsByTagName('li')
+        console.log(oElements.length)
+        const oLis = document.getElementsByClassName('course')
+        console.log(oLis.length)
+        
+        const oLastLi = document.querySelector('#lstCourse :last-child')
+        console.log(oLastLi.innerHTML)
+
+        const oAllLi = document.querySelectorAll('.course')
+        console.log(oAllLi.length)
+    </script>
+</body>
+</html>

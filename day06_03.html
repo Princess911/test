@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1 {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+        #box2 {
+            width: 100px;
+            height: 100px;
+            border: 1px dotted black;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">
+
+    </div>   
+    <script>
+        const oBox = document.querySelector("#box1")
+        console.log(oBox.getAttribute('id'))
+        oBox.setAttribute('id','box2')
+        
+    </script>
+</body>
+</html>

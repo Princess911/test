@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="lstLanguage">
+        <li>Java</li>
+        <li>Python</li>
+        <li>Kolin</li>
+        <li>JavaScript</li>
+    </ul>
+    <script>
+        const oList = document.querySelector("#lstLanguage")
+        //oList.setAttribute('style', 'border: 1px solid red')
+        //oList.remosveAttribute('style')
+
+        //oList.style.border = '1px solid red'
+        //oList.style.backgroundColor = 'blue'  // background-color
+        //oList.style.cssFloat = 'right'
+        oList.style.cssText = 'border: 1px solid red;color:red;'
+        console.log(oList.style.color)
+    </script>
+
+
+</body>
+</html>
